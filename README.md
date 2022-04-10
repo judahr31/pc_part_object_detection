@@ -1,1 +1,0 @@
-# pc_part_object_detection

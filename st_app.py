@@ -1,6 +1,5 @@
 import streamlit as st
-from PIL import Image, ImageOps
-import io
+from PIL import Image
 import cv2
 import numpy as np
 import evalulate_model.ai as model

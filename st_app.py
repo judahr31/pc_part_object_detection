@@ -3,6 +3,7 @@ from PIL import Image
 import cv2
 import numpy as np
 import evalulate_model.ai as model
+from pathlib import Path
 
 page = st.sidebar.radio("Page", ['Analysis', 'Prediction', 'About'])
 if page == 'Prediction':
@@ -42,4 +43,5 @@ elif page == 'Analysis':
         image = Image.open('confusion_matrix.jpg')
         st.image(image)
 elif page == "About":
-    st.write()
+    readme = Path("README.md")
+    st.write(readme.read_text())

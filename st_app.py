@@ -5,7 +5,7 @@ import numpy as np
 import evalulate_model.ai as model
 from pathlib import Path
 
-page = st.sidebar.radio("Page", ['Analysis', 'Prediction', 'About'])
+page = st.sidebar.radio("Page", ['Prediction', 'Analysis', 'About'])
 if page == 'Prediction':
     with st.spinner("Loading YOLO"):
         net = model.get_yolo_net("yolov4-tiny-custom.cfg", "yolov4-tiny-custom_final.weights")

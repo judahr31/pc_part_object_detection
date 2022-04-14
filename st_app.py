@@ -16,7 +16,7 @@ if page == 'Prediction':
             CLASSES.append(line)
     COLORS = np.random.randint(0, 255, size=(len(CLASSES), 3), dtype='uint8')
     picture = st.camera_input("Take a picture")
-    uploaded_image = st.file_uploader("Upload an image", type=['jpg', 'jpeg', 'png'])
+    uploaded_image = st.file_uploader("Upload an image", type=['jpg', 'jpeg', 'png', 'WEBP'])
 
 
     bytes_to_use = picture if picture is not None else uploaded_image

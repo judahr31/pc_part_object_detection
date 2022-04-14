@@ -34,7 +34,6 @@ if page == 'Prediction':
         model.yolo_show_img(image, classid, boxes, output_classes, confidence, COLORS)
         st.image(image)
 elif page == 'Analysis':
-    st.write("Hello")
     matrix_type = st.selectbox("Do Normalize?", ["Normalized Confusion Matrix", "Confusion Matrix"])
     if matrix_type == "Normalized Confusion Matrix":
         image = Image.open('normalized_confusion_matrix.jpg')

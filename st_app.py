@@ -15,6 +15,7 @@ if page == 'Prediction':
         for line in f.read().split("\n"):
             CLASSES.append(line)
     COLORS = np.random.randint(0, 255, size=(len(CLASSES), 3), dtype='uint8')
+    use_preset = st.selectbox("Use default images?", ["Graphics Card", "Power Supply"])
     picture = st.camera_input("Take a picture")
     uploaded_image = st.file_uploader("Upload an image", type=['jpg', 'jpeg', 'png', 'WEBP'])
 

@@ -15,14 +15,21 @@ if page == 'Prediction':
         for line in f.read().split("\n"):
             CLASSES.append(line)
     COLORS = np.random.randint(0, 255, size=(len(CLASSES), 3), dtype='uint8')
-    use_preset = st.selectbox("Use default images?", ["Graphics Card", "Power Supply"])
     picture = st.camera_input("Take a picture")
     uploaded_image = st.file_uploader("Upload an image", type=['jpg', 'jpeg', 'png', 'WEBP'])
 
-
     bytes_to_use = picture if picture is not None else uploaded_image
+    use_preset = st.checkbox("Use default image?")
+    if use_preset is True:
+        preset_img = st.selectbox("Please select image", ["Graphics Card", "Power Supply"])
+        if preset_img == "Graphics Card":
+            img = cv2.imread("graphiccard.jpg")
+        elif preset_img == "Power Supply":
+            img = cv2.imread("oiwersupply.jpg")
+    else:
+        preset_img = None
     #bytes_to_use = img = cv2.imread('dog.jpeg')
-    if bytes_to_use is not None:
+    if bytes_to_use is not None and preset_img is None:
         with st.spinner("Loading Image"):
             bytes_to_use = bytes_to_use.getvalue()
             image = cv2.imdecode(np.frombuffer(bytes_to_use, np.uint8), cv2.IMREAD_COLOR)
@@ -34,6 +41,12 @@ if page == 'Prediction':
             st.write(classid, output_classes, boxes, confidence)
         model.yolo_show_img(image, classid, boxes, output_classes, confidence, COLORS)
         st.image(image)
+    elif preset_img is not None:
+        classid, output_classes, boxes, confidence = model.yolo_forward(net, CLASSES, img, .25, save_image=False)
+        with st.expander("Open me"):
+            st.write(classid, output_classes, boxes, confidence)
+        model.yolo_show_img(img, classid, boxes, output_classes, confidence, COLORS)
+        st.image(img)
 elif page == 'Analysis':
     matrix_type = st.selectbox("Do Normalize?", ["Normalized Confusion Matrix", "Confusion Matrix"])
     if matrix_type == "Normalized Confusion Matrix":

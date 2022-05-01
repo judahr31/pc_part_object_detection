@@ -53,6 +53,8 @@ Step 1: Clone repository
 
 Step 2: Install requirements (optionally in a virtual environment)
 
+`python -m venv venv`
+
 `pip install -r dev_requirements.txt`
 
 Step 3: Run code

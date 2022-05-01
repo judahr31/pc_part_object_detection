@@ -48,3 +48,26 @@ Next steps for the web app would be to add real-time camera/video detection. I a
 
 My favorite thing I learned while creating my project was the GPU training. I thought it was really cool how a computer was able to learn to recognize things just like humans can. It was also cool to see the accuracy of the network improving as training went on.
 
+## Development
+Step 1: Clone repository
+
+Step 2: Install requirements (optionally in a virtual environment)
+
+`pip install -r dev_requirements.txt`
+
+Step 3: Run code
+
+`streamlit run st_app.py`
+
+Step 4: Auto-format with black
+
+`black -l 120 .`
+
+Step 5: Static checking
+
+`flake8 --exclude venv --max-line-length 120 .`
+
+Step 6: Sort imports
+
+`isort --profile black .`
+

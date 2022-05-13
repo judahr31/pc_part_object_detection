@@ -35,10 +35,12 @@ Training took…
 
 mAP and IoU scores - 0.066080 avg loss - When you see that average loss 0.xxxxxx avg no longer decreases at many iterations then you should stop training. The final average loss can be from 0.05 (for a small model and easy dataset) to 3.0 (for a big model and a difficult dataset).
 
-more mAP and IoU
-
 When tested with uploaded images and images from a webcam, promising results were produced. The first test was with a fan, and the fan was predicted correctly with 99% confidence first try. However, sometimes it would predict a fan or CPU when there was none there. This pattern was the same for uploaded images.
- 
+
+Training was done on command line with darknet
+
+Github link to darknet tutorial: https://github.com/AlexeyAB/darknet#pre-trained-models
+
 ## Next Steps/Conclusion
 The Normalized Confusion Matrix shows the weak points of the network. Fans and Motherboards were almost perfect, while the rest lagged behind. A major issue with the network, as shown by the confusion matrix, is that when nothing is there, Fans and RAM are predicted quite often.
 
@@ -54,6 +56,8 @@ Step 1: Clone repository
 Step 2: Install requirements (optionally in a virtual environment)
 
 `python -m venv venv`
+
+`.\venv\Scripts\activate`
 
 `pip install -r dev_requirements.txt`
 

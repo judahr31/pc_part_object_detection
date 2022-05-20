@@ -31,8 +31,6 @@ I used a total of 590 images
 
 - RAM: 95, when possible, individual RAM sticks were labeled as opposed to all of them as a whole
 
-Training took…
-
 mAP and IoU scores - 0.066080 avg loss - When you see that average loss 0.xxxxxx avg no longer decreases at many iterations then you should stop training. The final average loss can be from 0.05 (for a small model and easy dataset) to 3.0 (for a big model and a difficult dataset).
 
 When tested with uploaded images and images from a webcam, promising results were produced. The first test was with a fan, and the fan was predicted correctly with 99% confidence first try. However, sometimes it would predict a fan or CPU when there was none there. This pattern was the same for uploaded images.

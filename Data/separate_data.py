@@ -1,7 +1,7 @@
 import os
 import random
 
-input_folder = "images"
+input_folder = "JPEGImgs"
 
 train = []
 test = []
@@ -14,10 +14,10 @@ for subfolder in os.listdir(input_folder):
             del internal_files[i]
     for i in range(round(len(internal_files)*.3)):
         num = random.randint(0, len(internal_files)-1)
-        test.append(f'images\{subfolder}\{internal_files[num]}')
+        test.append(f'JPEGImgs\{subfolder}\{internal_files[num]}')
         del internal_files[num]
     for file in internal_files:
-        train.append(f'images\{subfolder}\{file}')
+        train.append(f'JPEGImgs\{subfolder}\{file}')
 
 print(test)
 print(train)

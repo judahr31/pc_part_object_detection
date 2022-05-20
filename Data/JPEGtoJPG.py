@@ -1,12 +1,12 @@
 from PIL import Image
 import os
 
-folder = "NewJPG"
+folder = "JPGImgs"
 os.makedirs(folder, exist_ok=True)
 
 JPEG_list = []
 
-input_folder = 'images'
+input_folder = 'JPEGImgs'
 for subfolder in os.listdir(input_folder):
     internal_folder = os.path.join(input_folder, subfolder)
     internal_files = os.listdir(internal_folder)

@@ -237,7 +237,7 @@ def yolo_pred(image_path, names_path, cfg_path, weight_path):
     np.random.seed(42)
     colors = np.random.randint(0, 255, size=(len(labels), 3), dtype="uint8")
 
-    # read images
+    # read JPEGImgs
     image = cv2.imread(image_path)
 
     (class_ids, labels, boxes, confidences) = yolo_forward(net, labels, image, confidence_level=0.5)

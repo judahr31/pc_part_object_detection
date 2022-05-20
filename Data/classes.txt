@@ -1,0 +1,6 @@
+Fan
+Motherboard
+CPU
+GPU
+RAM
+Power Supply

@@ -1,7 +1,7 @@
 # YOLO PC Part Detector
 
 ## About
-Last year, I had the opportunity to take a coding class in my school. We learned Python and created simple games with the Turtle module. I always wanted to learn how to program but never really got the chance to. I took this as the perfect opportunity. Besides for what we did in class, I went on my own working on personal projects, such as a space invaders game, and watching tutorials about learning Python. It brought me to where I was before I started this project: able to write lengthy and complicated scripts on my own.
+In 2021, I had the opportunity to take a coding class in my school. We learned Python and created simple games with the Turtle module. I always wanted to learn how to program but never really got the chance to. I took this as the perfect opportunity. Besides for what we did in class, I went on my own working on personal projects, such as a space invaders game, and watching tutorials about learning Python. It brought me to where I was before I started this project: able to write lengthy and complicated scripts on my own.
 I did not really know much about computer vision and AI. I knew what the concepts were but I never actually had any experience.
 As I was brainstorming ideas, I looked to my right and saw my PC. I thought to myself about how people new to PC building might confuse parts with each other or just do not know what they are. So I decided my project would detect PC parts.
 
